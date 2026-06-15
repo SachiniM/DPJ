@@ -1,0 +1,350 @@
+/* ----------------- Global Styles ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ----------------- Home Section ----------------- */
+#home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 600px;
+}
+
+.HT {
+  color: rgb(220, 227, 124);
+  font-size: 50px;
+  font-style: oblique;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.HP {
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------- Navigation ----------------- */
+nav {
+  background-color: rgba(49, 38, 171, 0.85);
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.branding img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.C-name {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(202, 50, 83);
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ----------------- About Section ----------------- */
+#a-section, #about {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.a-section h1, #about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a3e72;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.a-section h1::after, #about h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color:#1a3e72;
+}
+
+.a-content, .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-text, .a-content p {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-img img, .a-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-img:hover img {
+  transform: scale(1.03);
+}
+
+/* ----------------- Vision & Mission ----------------- */
+#VM, .vision, .mission {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vision img, .mission img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* ----------------- Services ----------------- */
+#S, #Villa, #Pool, #Interior, #Exterior {
+  padding: 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.services-container, .service-features {
+  display: grid;
+  gap: 30px;
+}
+
+.services-container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-card, .feature-card {
+  background: cornsilk;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  background-color: antiquewhite;
+}
+
+.service-card img, .feature-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ----------------- Projects ----------------- */
+#projects .project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  width: 320px;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------- Jungle / Gallery ----------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ----------------- Contact ----------------- */
+#contact .contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contact-info, .contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+  background-color:#1a3e72;
+  color:white;
+  padding: 60px 20px 30px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 1200px) {
+  .service-features {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-color: rgba(49, 38, 171, 0.95);
+    padding: 15px;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content {
+    left: 5%;
+    padding-right: 5%;
+  }
+
+  .HT { font-size: 36px; }
+  .HP { font-size: 18px; }
+
+  .about-content, .services-container, .gallery-grid, #contact .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-img { height: 180px; }
+}
+
+@media (max-width: 480px) {
+  .HT { font-size: 28px; }
+  .HP { font-size: 16px; }
+  #about h1, .a-section h1, .G h1 { font-size: 28px; }
+}
